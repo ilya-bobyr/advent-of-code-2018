@@ -1,0 +1,108 @@
+	Sun Dec 23 01:54 2018 Time and Allocation Profiling Report  (Final)
+
+	   day11 +RTS -p -RTS 9424
+
+	total time  =       20.27 secs   (20269 ticks @ 1000 us, 1 processor)
+	total alloc = 11,333,853,736 bytes  (excludes profiling overheads)
+
+COST CENTRE   MODULE SRC                         %time %alloc
+
+squarePower   Main   src/Main.hs:(30,1)-(32,48)   80.7    0.0
+squarePower.\ Main   src/Main.hs:31:19-45         18.3   94.0
+solution2     Main   src/Main.hs:(43,1)-(49,35)    0.7    5.4
+
+
+                                                                                                individual      inherited
+COST CENTRE                 MODULE                SRC                        no.     entries  %time %alloc   %time %alloc
+
+MAIN                        MAIN                  <built-in>                 161          0    0.0    0.0   100.0  100.0
+ CAF                        GHC.Conc.Signal       <entire-module>            272          0    0.0    0.0     0.0    0.0
+ CAF                        GHC.IO.Encoding       <entire-module>            262          0    0.0    0.0     0.0    0.0
+ CAF                        GHC.IO.Encoding.Iconv <entire-module>            260          0    0.0    0.0     0.0    0.0
+ CAF                        GHC.IO.Exception      <entire-module>            254          0    0.0    0.0     0.0    0.0
+ CAF                        GHC.IO.Handle.FD      <entire-module>            252          0    0.0    0.0     0.0    0.0
+ CAF                        GHC.IO.Handle.Text    <entire-module>            250          0    0.0    0.0     0.0    0.0
+ CAF                        GHC.TopHandler        <entire-module>            230          0    0.0    0.0     0.0    0.0
+ CAF                        Text.Printf           <entire-module>            221          0    0.0    0.0     0.0    0.0
+ CAF                        Text.Read.Lex         <entire-module>            219          0    0.0    0.0     0.0    0.0
+ CAF:a1_r8Ek                Main                  <no location info>         287          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 327          0    0.0    0.0     0.0    0.0
+   cellPowerLevel           Main                  src/Main.hs:(17,1)-(20,46) 328          1    0.0    0.0     0.0    0.0
+    cellPowerLevel.rackId   Main                  src/Main.hs:18:7-22        329          1    0.0    0.0     0.0    0.0
+    cellPowerLevel.v        Main                  src/Main.hs:19:7-45        330          1    0.0    0.0     0.0    0.0
+ CAF:a2_r8El                Main                  <no location info>         288          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 334          0    0.0    0.0     0.0    0.0
+   cellPowerLevel           Main                  src/Main.hs:(17,1)-(20,46) 335          1    0.0    0.0     0.0    0.0
+    cellPowerLevel.rackId   Main                  src/Main.hs:18:7-22        336          1    0.0    0.0     0.0    0.0
+    cellPowerLevel.v        Main                  src/Main.hs:19:7-45        337          1    0.0    0.0     0.0    0.0
+ CAF:a3_r8Em                Main                  <no location info>         289          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 341          0    0.0    0.0     0.0    0.0
+   cellPowerLevel           Main                  src/Main.hs:(17,1)-(20,46) 342          1    0.0    0.0     0.0    0.0
+    cellPowerLevel.rackId   Main                  src/Main.hs:18:7-22        343          1    0.0    0.0     0.0    0.0
+    cellPowerLevel.v        Main                  src/Main.hs:19:7-45        344          1    0.0    0.0     0.0    0.0
+ CAF:a4_r8Eo                Main                  <no location info>         290          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 348          0    0.0    0.0     0.0    0.0
+   squarePower              Main                  src/Main.hs:(30,1)-(32,48) 349          1    0.0    0.0     0.0    0.0
+    squarePower.\           Main                  src/Main.hs:31:19-45       350          9    0.0    0.0     0.0    0.0
+ CAF:grid18_r8Ej            Main                  src/Main.hs:56:7-12        286          0    0.0    0.0     0.1    0.1
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 351          0    0.0    0.0     0.1    0.1
+   main.grid18              Main                  src/Main.hs:56:7-25        352          1    0.0    0.0     0.1    0.1
+    getGrid                 Main                  src/Main.hs:(23,1)-(27,19) 353          1    0.0    0.1     0.1    0.1
+     cellPowerLevel         Main                  src/Main.hs:(17,1)-(20,46) 355      90601    0.0    0.0     0.0    0.0
+      cellPowerLevel.rackId Main                  src/Main.hs:18:7-22        356      90601    0.0    0.0     0.0    0.0
+      cellPowerLevel.v      Main                  src/Main.hs:19:7-45        357      90601    0.0    0.0     0.0    0.0
+     getGrid.bounds         Main                  src/Main.hs:24:7-35        354          1    0.0    0.0     0.0    0.0
+ CAF:lvl25_r8Eu             Main                  <no location info>         292          0    0.0    0.0    99.6   99.2
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 380          0    0.0    0.0    99.6   99.2
+   solution2                Main                  src/Main.hs:(43,1)-(49,35) 381          1    0.7    5.4    99.6   99.2
+    solution2.\             Main                  src/Main.hs:46:27-64       382    2372866    0.1    0.0    98.9   93.8
+     squarePower            Main                  src/Main.hs:(30,1)-(32,48) 383    2372866   80.5    0.0    98.8   93.8
+      squarePower.\         Main                  src/Main.hs:31:19-45       384  664591827   18.3   93.8    18.3   93.8
+ CAF:lvl31_r8EB             Main                  <no location info>         295          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 378          0    0.0    0.0     0.0    0.0
+ CAF:lvl32_r8EC             Main                  <no location info>         296          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 377          0    0.0    0.0     0.0    0.0
+ CAF:lvl35_r8EF             Main                  <no location info>         297          0    0.0    0.0     0.0    0.0
+ CAF:lvl36_r8EG             Main                  <no location info>         298          0    0.0    0.0     0.2    0.3
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 362          0    0.0    0.0     0.2    0.3
+   solution1                Main                  src/Main.hs:(35,1)-(40,26) 363          1    0.0    0.2     0.2    0.3
+    solution1.\             Main                  src/Main.hs:38:16-40       364      88804    0.0    0.0     0.1    0.1
+     squarePower            Main                  src/Main.hs:(30,1)-(32,48) 365      88804    0.1    0.0     0.1    0.1
+      squarePower.\         Main                  src/Main.hs:31:19-45       366     799236    0.0    0.1     0.0    0.1
+ CAF:lvl41_r8EM             Main                  <no location info>         300          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 359          0    0.0    0.0     0.0    0.0
+ CAF:lvl42_r8EN             Main                  <no location info>         301          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 358          0    0.0    0.0     0.0    0.0
+ CAF:lvl44_r8EP             Main                  <no location info>         302          0    0.0    0.0     0.0    0.0
+ CAF:lvl50_r8EV             Main                  <no location info>         304          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 346          0    0.0    0.0     0.0    0.0
+ CAF:lvl51_r8EW             Main                  <no location info>         305          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 345          0    0.0    0.0     0.0    0.0
+ CAF:lvl53_r8EY             Main                  <no location info>         306          0    0.0    0.0     0.0    0.0
+ CAF:lvl58_r8F3             Main                  <no location info>         308          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 325          0    0.0    0.0     0.0    0.0
+ CAF:lvl59_r8F4             Main                  <no location info>         309          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 324          0    0.0    0.0     0.0    0.0
+ CAF:lvl61_r8F6             Main                  <no location info>         310          0    0.0    0.0     0.0    0.0
+ CAF:lvl66_r8Fb             Main                  <no location info>         312          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 339          0    0.0    0.0     0.0    0.0
+ CAF:lvl67_r8Fc             Main                  <no location info>         313          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 338          0    0.0    0.0     0.0    0.0
+ CAF:lvl69_r8Fe             Main                  <no location info>         314          0    0.0    0.0     0.0    0.0
+ CAF:lvl74_r8Fj             Main                  <no location info>         316          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 332          0    0.0    0.0     0.0    0.0
+ CAF:lvl75_r8Fk             Main                  <no location info>         317          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 331          0    0.0    0.0     0.0    0.0
+ CAF:main1                  Main                  <no location info>         320          0    0.0    0.0     0.0    0.0
+  main                      Main                  src/Main.hs:(52,1)-(78,34) 322          1    0.0    0.0     0.0    0.0
+ main                       Main                  src/Main.hs:(52,1)-(78,34) 323          0    0.0    0.0     0.2    0.4
+  main.myGrid               Main                  src/Main.hs:55:7-33        371          1    0.0    0.0     0.0    0.1
+   getGrid                  Main                  src/Main.hs:(23,1)-(27,19) 372          1    0.0    0.1     0.0    0.1
+    cellPowerLevel          Main                  src/Main.hs:(17,1)-(20,46) 374      90601    0.0    0.0     0.0    0.0
+     cellPowerLevel.rackId  Main                  src/Main.hs:18:7-22        375      90601    0.0    0.0     0.0    0.0
+     cellPowerLevel.v       Main                  src/Main.hs:19:7-45        376      90601    0.0    0.0     0.0    0.0
+    getGrid.bounds          Main                  src/Main.hs:24:7-35        373          1    0.0    0.0     0.0    0.0
+  solution1                 Main                  src/Main.hs:(35,1)-(40,26) 367          1    0.0    0.2     0.2    0.3
+   solution1.\              Main                  src/Main.hs:38:16-40       368      88804    0.0    0.0     0.1    0.1
+    squarePower             Main                  src/Main.hs:(30,1)-(32,48) 369      88804    0.1    0.0     0.1    0.1
+     squarePower.\          Main                  src/Main.hs:31:19-45       370     799236    0.0    0.1     0.0    0.1
