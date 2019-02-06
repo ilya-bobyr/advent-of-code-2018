@@ -1,0 +1,78 @@
+	Sun Jan 27 23:52 2019 Time and Allocation Profiling Report  (Final)
+
+	   day20 +RTS -p -RTS
+
+	total time  =        7.02 secs   (7021 ticks @ 1000 us, 1 processor)
+	total alloc = 15,246,534,712 bytes  (excludes profiling overheads)
+
+COST CENTRE              MODULE SRC                         %time %alloc
+
+walkTheBoard.go          Main   src/Main.hs:(89,7)-(98,28)   31.3   33.9
+boardAddDoor             Main   src/Main.hs:(78,1)-(84,14)   29.1   19.4
+posShift                 Main   src/Main.hs:(56,1)-(61,47)   11.9   17.1
+walkTheBoard.go.moves'.\ Main   src/Main.hs:93:35-50         11.7   16.8
+walkTheBoard.go.moves'   Main   src/Main.hs:93:13-64          6.7   12.1
+boardAddDoor.to          Main   src/Main.hs:79:7-29           6.2    0.0
+walkTheBoard.go.moves'   Main   src/Main.hs:97:16-49          2.5    0.0
+
+
+                                                                                                       individual      inherited
+COST CENTRE                     MODULE                SRC                           no.     entries  %time %alloc   %time %alloc
+
+MAIN                            MAIN                  <built-in>                    204          0    0.0    0.0   100.0  100.0
+ CAF                            GHC.Conc.Signal       <entire-module>               313          0    0.0    0.0     0.0    0.0
+ CAF                            GHC.IO.Encoding       <entire-module>               298          0    0.0    0.0     0.0    0.0
+ CAF                            GHC.IO.Encoding.Iconv <entire-module>               296          0    0.0    0.0     0.0    0.0
+ CAF                            GHC.IO.Exception      <entire-module>               290          0    0.0    0.0     0.0    0.0
+ CAF                            GHC.IO.Handle.FD      <entire-module>               288          0    0.0    0.0     0.0    0.0
+ CAF                            GHC.TopHandler        <entire-module>               265          0    0.0    0.0     0.0    0.0
+ CAF:inputParser1               Main                  <no location info>            404          0    0.0    0.0     0.0    0.0
+  inputParser                   Main                  src/Main.hs:(48,1)-(53,13)    411          1    0.0    0.0     0.0    0.0
+ CAF:inputParser3               Main                  <no location info>            399          0    0.0    0.0     0.0    0.0
+  oneStepParser                 Main                  src/Main.hs:(37,1)-(45,29)    414          1    0.0    0.0     0.0    0.0
+ CAF:inputParser_m1             Main                  <no location info>            402          0    0.0    0.0     0.0    0.0
+  inputParser                   Main                  src/Main.hs:(48,1)-(53,13)    413          0    0.0    0.0     0.0    0.0
+ CAF:m1_raQr                    Main                  <no location info>            391          0    0.0    0.0     0.0    0.0
+  oneStepParser                 Main                  src/Main.hs:(37,1)-(45,29)    424          0    0.0    0.0     0.0    0.0
+ CAF:m2_raQt                    Main                  <no location info>            392          0    0.0    0.0     0.0    0.0
+  oneStepParser                 Main                  src/Main.hs:(37,1)-(45,29)    423          0    0.0    0.0     0.0    0.0
+ CAF:m3_raQu                    Main                  <no location info>            393          0    0.0    0.0     0.0    0.0
+  oneStepParser                 Main                  src/Main.hs:(37,1)-(45,29)    420          0    0.0    0.0     0.0    0.0
+ CAF:m4_raQA                    Main                  <no location info>            403          0    0.0    0.0     0.0    0.0
+  inputParser                   Main                  src/Main.hs:(48,1)-(53,13)    425          0    0.0    0.0     0.0    0.0
+ CAF:main1                      Main                  <no location info>            406          0    0.0    0.0     0.0    0.0
+  main                          Main                  src/Main.hs:(135,1)-(137,33)  408          1    0.0    0.0     0.0    0.0
+ CAF:p1_raQv                    Main                  <no location info>            394          0    0.0    0.0     0.0    0.0
+  oneStepParser                 Main                  src/Main.hs:(37,1)-(45,29)    419          0    0.0    0.0     0.0    0.0
+ CAF:p2_raQw                    Main                  <no location info>            395          0    0.0    0.0     0.0    0.0
+  oneStepParser                 Main                  src/Main.hs:(37,1)-(45,29)    418          0    0.0    0.0     0.0    0.0
+ CAF:p3_raQx                    Main                  <no location info>            396          0    0.0    0.0     0.0    0.0
+  oneStepParser                 Main                  src/Main.hs:(37,1)-(45,29)    417          0    0.0    0.0     0.0    0.0
+ CAF:p4_raQy                    Main                  <no location info>            397          0    0.0    0.0     0.0    0.0
+  oneStepParser                 Main                  src/Main.hs:(37,1)-(45,29)    416          0    0.0    0.0     0.0    0.0
+ CAF:pathParser1                Main                  <no location info>            398          0    0.0    0.0     0.0    0.0
+  pathParser                    Main                  src/Main.hs:34:1-31           421          1    0.0    0.0     0.0    0.0
+ CAF:processLine3               Main                  <no location info>            374          0    0.0    0.0     0.0    0.0
+  processLine                   Main                  src/Main.hs:(140,1)-(153,47)  429          0    0.0    0.0     0.0    0.0
+   processLine.initialBoard     Main                  src/Main.hs:(149,11)-(151,65) 430          0    0.0    0.0     0.0    0.0
+ CAF:processLine_arraySize      Main                  src/Main.hs:148:11-19         373          0    0.0    0.0     0.0    0.0
+  processLine                   Main                  src/Main.hs:(140,1)-(153,47)  431          0    0.0    0.0     0.0    0.0
+   processLine.arraySize        Main                  src/Main.hs:148:11-26         432          1    0.0    0.0     0.0    0.0
+ CAF:processLine_initialBoard   Main                  src/Main.hs:149:11-22         375          0    0.0    0.0     0.1    0.2
+  processLine                   Main                  src/Main.hs:(140,1)-(153,47)  427          0    0.0    0.0     0.1    0.2
+   processLine.initialBoard     Main                  src/Main.hs:(149,11)-(151,65) 428          1    0.1    0.2     0.1    0.2
+ main                           Main                  src/Main.hs:(135,1)-(137,33)  409          0    0.1    0.0    99.9   99.8
+  processLine                   Main                  src/Main.hs:(140,1)-(153,47)  410          1    0.0    0.0    99.8   99.8
+   processLine.board            Main                  src/Main.hs:152:11-58         426          1    0.0    0.0    99.7   99.5
+    walkTheBoard                Main                  src/Main.hs:(87,1)-(101,23)   433          1    0.3    0.2    99.7   99.5
+     walkTheBoard.go            Main                  src/Main.hs:(89,7)-(98,28)    434   57151957   31.3   33.9    99.4   99.3
+      boardAddDoor              Main                  src/Main.hs:(78,1)-(84,14)    435   46171172   29.1   19.4    35.3   19.4
+       boardAddDoor.to          Main                  src/Main.hs:79:7-29           436   46171172    6.2    0.0     6.2    0.0
+        posShift                Main                  src/Main.hs:(56,1)-(61,47)    437   46171172    0.0    0.0     0.0    0.0
+      walkTheBoard.go.moves'    Main                  src/Main.hs:97:16-49          438   46171171    2.5    0.0    14.4   17.1
+       posShift                 Main                  src/Main.hs:(56,1)-(61,47)    439   40851371   11.9   17.1    11.9   17.1
+      walkTheBoard.go.moves'    Main                  src/Main.hs:93:13-64          440    5469613    6.7   12.1    18.4   28.9
+       walkTheBoard.go.moves'.\ Main                  src/Main.hs:93:35-50          441   10980785   11.7   16.8    11.7   16.8
+   inputParser                  Main                  src/Main.hs:(48,1)-(53,13)    412          0    0.0    0.0     0.2    0.3
+    oneStepParser               Main                  src/Main.hs:(37,1)-(45,29)    415          0    0.1    0.2     0.2    0.3
+     pathParser                 Main                  src/Main.hs:34:1-31           422          0    0.0    0.0     0.0    0.0
