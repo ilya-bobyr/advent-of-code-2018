@@ -1,0 +1,141 @@
+	Thu Mar  7 01:18 2019 Time and Allocation Profiling Report  (Final)
+
+	   day23 +RTS -p -RTS
+
+	total time  =      131.28 secs   (131281 ticks @ 1000 us, 1 processor)
+	total alloc = 1,097,957,080 bytes  (excludes profiling overheads)
+
+COST CENTRE              MODULE               SRC                              %time %alloc
+
+countReaching            Main                 src/Main.hs:(78,1)-(80,49)        90.9   12.7
+countReaching.reaching   Main                 src/Main.hs:79:7-68                8.3    0.0
+bestPoints.pointRank     Main                 src/Main.hs:201:7-36               0.2    6.3
+solution2.candidates     Main                 src/Main.hs:(333,7)-(362,62)       0.2   47.0
+processSlice.markOverlap Main                 src/Main.hs:(273,7)-(285,22)       0.1   25.6
+numberParser             Main                 src/Main.hs:(31,1)-(36,22)         0.0    4.9
+searchSafeRange.m        Numeric.Search.Range Numeric/Search/Range.hs:47:9-33    0.0    1.2
+
+
+                                                                                                                                  individual      inherited
+COST CENTRE                                   MODULE                  SRC                                      no.     entries  %time %alloc   %time %alloc
+
+MAIN                                          MAIN                    <built-in>                               257          0    0.0    0.0   100.0  100.0
+ CAF                                          GHC.Conc.Signal         <entire-module>                          365          0    0.0    0.0     0.0    0.0
+ CAF                                          GHC.IO.Encoding         <entire-module>                          350          0    0.0    0.0     0.0    0.0
+ CAF                                          GHC.IO.Encoding.Iconv   <entire-module>                          348          0    0.0    0.0     0.0    0.0
+ CAF                                          GHC.IO.Exception        <entire-module>                          342          0    0.0    0.0     0.0    0.0
+ CAF                                          GHC.IO.Handle.FD        <entire-module>                          340          0    0.0    0.0     0.0    0.0
+ CAF                                          GHC.IO.Handle.Internals <entire-module>                          339          0    0.0    0.0     0.0    0.0
+ CAF                                          GHC.IO.Handle.Text      <entire-module>                          338          0    0.0    0.0     0.0    0.0
+ CAF                                          GHC.TopHandler          <entire-module>                          316          0    0.0    0.0     0.0    0.0
+ CAF                                          Text.Read.Lex           <entire-module>                          303          0    0.0    0.0     0.0    0.0
+ CAF:inputParser1                             Main                    <no location info>                       510          0    0.0    0.0     0.0    0.0
+  inputParser                                 Main                    src/Main.hs:(53,1)-(56,13)               516          1    0.0    0.0     0.0    0.0
+ CAF:lvl40_rfE5                               Main                    <no location info>                       500          0    0.0    0.0     0.0    0.0
+ CAF:m1_rfDO                                  Main                    <no location info>                       490          0    0.0    0.0     0.0    0.0
+ CAF:m2_rfDQ                                  Main                    <no location info>                       491          0    0.0    0.0     0.0    0.0
+ CAF:m3_rfEc                                  Main                    <no location info>                       506          0    0.0    0.0     0.0    0.0
+  nanoBotParser                               Main                    src/Main.hs:(39,1)-(50,30)               524          0    0.0    0.0     0.0    0.0
+ CAF:m4_rfEd                                  Main                    <no location info>                       509          0    0.0    0.0     0.0    0.0
+  inputParser                                 Main                    src/Main.hs:(53,1)-(56,13)               526          0    0.0    0.0     0.0    0.0
+ CAF:main1                                    Main                    <no location info>                       512          0    0.0    0.0     0.0    0.0
+  main                                        Main                    src/Main.hs:(369,1)-(376,28)             514          1    0.0    0.0     0.0    0.0
+ CAF:main6                                    Main                    <no location info>                       482          0    0.0    0.0     0.0    0.0
+ CAF:nanoBotParser1                           Main                    <no location info>                       507          0    0.0    0.0     0.0    0.0
+  nanoBotParser                               Main                    src/Main.hs:(39,1)-(50,30)               518          1    0.0    0.0     0.0    0.0
+ CAF:nanoBotParser3                           Main                    <no location info>                       504          0    0.0    0.0     0.0    0.0
+  numberParser                                Main                    src/Main.hs:(31,1)-(36,22)               520          1    0.0    0.0     0.0    0.0
+ CAF:nanoBotParser5                           Main                    <no location info>                       503          0    0.0    0.0     0.0    0.0
+  numberParser                                Main                    src/Main.hs:(31,1)-(36,22)               522          0    0.0    0.0     0.0    0.0
+ CAF:nanoBotParser8                           Main                    <no location info>                       492          0    0.0    0.0     0.0    0.0
+ main                                         Main                    src/Main.hs:(369,1)-(376,28)             515          0    0.0    0.2   100.0  100.0
+  solution1                                   Main                    src/Main.hs:(72,1)-(75,59)               527          1    0.0    0.0     0.0    0.0
+   countInRange                               Main                    src/Main.hs:(64,1)-(69,6)                528          1    0.0    0.0     0.0    0.0
+    nanobotPos                                Main                    src/Main.hs:26:5-14                      533       1000    0.0    0.0     0.0    0.0
+   nanobotSignal                              Main                    src/Main.hs:27:5-17                      534          1    0.0    0.0     0.0    0.0
+   solution1.from                             Main                    src/Main.hs:74:7-39                      529          1    0.0    0.0     0.0    0.0
+    nanobotPos                                Main                    src/Main.hs:26:5-14                      530          1    0.0    0.0     0.0    0.0
+   solution1.strongestSignal                  Main                    src/Main.hs:73:7-64                      531          1    0.0    0.0     0.0    0.0
+    nanobotSignal                             Main                    src/Main.hs:27:5-17                      532       1998    0.0    0.0     0.0    0.0
+  solution2                                   Main                    src/Main.hs:(302,1)-(366,33)             535          1    0.0    0.0   100.0   94.7
+   bestPoints                                 Main                    src/Main.hs:(199,1)-(213,63)             602          1    0.0    0.0    99.5   19.0
+    bestPoints.pickTheBest                    Main                    src/Main.hs:(203,7)-(208,30)             603    4339316    0.1    0.0    99.5   19.0
+     bestPoints.pickTheBest.pRank             Main                    src/Main.hs:208:17-30                    604    4339315    0.1    0.0    99.4   19.0
+      bestPoints.pointRank                    Main                    src/Main.hs:201:7-36                     606          0    0.2    6.3    99.3   19.0
+       countReaching                          Main                    src/Main.hs:(78,1)-(80,49)               607    4339315   90.8   12.6    99.1   12.6
+        countReaching.reaching                Main                    src/Main.hs:79:7-68                      608 4339315000    8.3    0.0     8.3    0.0
+    bestPoints.firstPoint                     Main                    src/Main.hs:210:7-30                     613          1    0.0    0.0     0.0    0.0
+    bestPoints.firstRank                      Main                    src/Main.hs:211:7-38                     609          1    0.0    0.0     0.0    0.0
+     bestPoints.pointRank                     Main                    src/Main.hs:201:7-36                     610          0    0.0    0.0     0.0    0.0
+      countReaching                           Main                    src/Main.hs:(78,1)-(80,49)               611          1    0.0    0.0     0.0    0.0
+       countReaching.reaching                 Main                    src/Main.hs:79:7-68                      612       1000    0.0    0.0     0.0    0.0
+    bestPoints.pointRank                      Main                    src/Main.hs:201:7-36                     605          1    0.0    0.0     0.0    0.0
+   solution2.(...)                            Main                    src/Main.hs:(307,7)-(312,9)              536          1    0.0    0.0     0.1   28.0
+    solution2.slices                          Main                    src/Main.hs:(305,7)-(306,74)             537          3    0.0    0.0     0.1   28.0
+     processSlice                             Main                    src/Main.hs:(257,1)-(298,68)             538          3    0.0    0.1     0.1   28.0
+      processSlice.filterAbove                Main                    src/Main.hs:(292,7)-(296,51)             570       4731    0.0    0.0     0.0    0.0
+      processSlice.cuts                       Main                    src/Main.hs:(259,7)-(260,37)             539          3    0.0    0.0     0.0    0.5
+       processSlice.flat                      Main                    src/Main.hs:258:7-26                     544       3000    0.0    0.0     0.0    0.0
+       solution2.slices.\                     Main                    src/Main.hs:306:63-73                    542       3000    0.0    0.0     0.0    0.0
+        solution2.(...).\                     Main                    src/Main.hs:310:32-62                    600       1000    0.0    0.0     0.0    0.0
+        solution2.(...).\                     Main                    src/Main.hs:309:32-62                    597       1000    0.0    0.0     0.0    0.0
+        solution2.(...).\                     Main                    src/Main.hs:308:32-62                    543       1000    0.0    0.0     0.0    0.0
+       nubSort                                Data.List.Extra         src/Data/List/Extra.hs:666:1-27          540          3    0.0    0.0     0.0    0.4
+        nubSortBy                             Data.List.Extra         src/Data/List/Extra.hs:(678,1)-(681,19)  541          3    0.0    0.4     0.0    0.4
+         nubSortBy.f                          Data.List.Extra         src/Data/List/Extra.hs:(679,11)-(681,19) 545       6003    0.0    0.0     0.0    0.0
+      processSlice.cutsArr                    Main                    src/Main.hs:261:7-40                     558          3    0.0    0.0     0.0    0.0
+      processSlice.maxI                       Main                    src/Main.hs:263:7-53                     546          3    0.0    0.0     0.0    0.0
+      processSlice.minOverlapsArr             Main                    src/Main.hs:(287,7)-(290,22)             547          3    0.0    0.0     0.1   27.4
+       processSlice.minOverlapsArr.\          Main                    src/Main.hs:289:30-58                    548       3000    0.0    0.0     0.1   27.4
+        processSlice.markOverlap              Main                    src/Main.hs:(273,7)-(285,22)             551       3000    0.1   25.6     0.1   27.3
+         processSlice.markOverlap.\           Main                    src/Main.hs:(282,38)-(284,51)            569    2696627    0.0    0.0     0.0    0.0
+         processSlice.markOverlap.(...)       Main                    src/Main.hs:274:13-47                    552       3000    0.0    0.0     0.0    0.0
+          processSlice.orderPair              Main                    src/Main.hs:(265,7)-(268,19)             553       3000    0.0    0.0     0.0    0.0
+         processSlice.markOverlap.endI        Main                    src/Main.hs:(278,13)-(281,65)            562       3000    0.0    0.0     0.0    0.9
+          searchFromTo                        Numeric.Search.Range    Numeric/Search/Range.hs:(35,1)-(38,23)   563       3000    0.0    0.0     0.0    0.9
+           searchSafeRange                    Numeric.Search.Range    Numeric/Search/Range.hs:(42,1)-(47,33)   566      34406    0.0    0.3     0.0    0.9
+            processSlice.markOverlap.endI.\   Main                    src/Main.hs:281:37-52                    568      31409    0.0    0.0     0.0    0.0
+            searchSafeRange.m                 Numeric.Search.Range    Numeric/Search/Range.hs:47:9-33          567      31409    0.0    0.6     0.0    0.6
+           processSlice.markOverlap.endI.\    Main                    src/Main.hs:281:37-52                    564       3000    0.0    0.0     0.0    0.0
+         processSlice.markOverlap.from        Main                    src/Main.hs:274:13-47                    554       3000    0.0    0.0     0.0    0.0
+         processSlice.markOverlap.startI      Main                    src/Main.hs:(275,13)-(277,61)            555       3000    0.0    0.0     0.0    0.9
+          searchFromTo                        Numeric.Search.Range    Numeric/Search/Range.hs:(35,1)-(38,23)   556       3000    0.0    0.0     0.0    0.9
+           searchSafeRange                    Numeric.Search.Range    Numeric/Search/Range.hs:(42,1)-(47,33)   559      35794    0.0    0.3     0.0    0.9
+            processSlice.markOverlap.startI.\ Main                    src/Main.hs:277:35-53                    561      32794    0.0    0.0     0.0    0.0
+            searchSafeRange.m                 Numeric.Search.Range    Numeric/Search/Range.hs:47:9-33          560      32794    0.0    0.6     0.0    0.6
+           processSlice.markOverlap.startI.\  Main                    src/Main.hs:277:35-53                    557       3000    0.0    0.0     0.0    0.0
+         processSlice.markOverlap.to          Main                    src/Main.hs:274:13-47                    565       3000    0.0    0.0     0.0    0.0
+        solution2.slices.\                    Main                    src/Main.hs:306:63-73                    549       3000    0.0    0.0     0.0    0.0
+         solution2.(...).\                    Main                    src/Main.hs:310:32-62                    601       1000    0.0    0.0     0.0    0.0
+         solution2.(...).\                    Main                    src/Main.hs:309:32-62                    598       1000    0.0    0.0     0.0    0.0
+         solution2.(...).\                    Main                    src/Main.hs:308:32-62                    550       1000    0.0    0.0     0.0    0.0
+   solution2.as                               Main                    src/Main.hs:(307,7)-(312,9)              594          1    0.0    0.0     0.0    0.0
+   solution2.bs                               Main                    src/Main.hs:(307,7)-(312,9)              596          1    0.0    0.0     0.0    0.0
+   solution2.candidates                       Main                    src/Main.hs:(333,7)-(362,62)             595          1    0.2   47.0     0.2   47.0
+   solution2.cs                               Main                    src/Main.hs:(307,7)-(312,9)              599          1    0.0    0.0     0.0    0.0
+   solution2.lowWater                         Main                    src/Main.hs:303:7-38                     571          1    0.0    0.0     0.1    0.6
+    bestEndpointRank                          Main                    src/Main.hs:(250,1)-(251,48)             572          1    0.0    0.0     0.1    0.6
+     bestEndpoints                            Main                    src/Main.hs:(228,1)-(236,36)             575          1    0.0    0.0     0.1    0.6
+      bestEndpoints.candidatePoints           Main                    src/Main.hs:(232,7)-(234,42)             576          1    0.0    0.0     0.0    0.6
+       bestEndpoints.botRangeEndpoints        Main                    src/Main.hs:(229,7)-(230,27)             579       1000    0.0    0.0     0.0    0.1
+        allDirections                         Main                    src/Main.hs:(83,1)-(89,22)               580       1000    0.0    0.0     0.0    0.0
+       nubSort                                Data.List.Extra         src/Data/List/Extra.hs:666:1-27          577          1    0.0    0.0     0.0    0.5
+        nubSortBy                             Data.List.Extra         src/Data/List/Extra.hs:(678,1)-(681,19)  578          1    0.0    0.5     0.0    0.5
+         nubSortBy.f                          Data.List.Extra         src/Data/List/Extra.hs:(679,11)-(681,19) 581       6001    0.0    0.0     0.0    0.0
+      bestPoints                              Main                    src/Main.hs:(199,1)-(213,63)             582          1    0.0    0.0     0.1    0.0
+       bestPoints.pickTheBest                 Main                    src/Main.hs:(203,7)-(208,30)             583       6000    0.0    0.0     0.1    0.0
+        bestPoints.pickTheBest.pRank          Main                    src/Main.hs:208:17-30                    584       5999    0.0    0.0     0.1    0.0
+         bestPoints.pointRank                 Main                    src/Main.hs:201:7-36                     586          0    0.0    0.0     0.1    0.0
+          countReaching                       Main                    src/Main.hs:(78,1)-(80,49)               587       5999    0.1    0.0     0.1    0.0
+           countReaching.reaching             Main                    src/Main.hs:79:7-68                      588    5999000    0.0    0.0     0.0    0.0
+       bestPoints.firstPoint                  Main                    src/Main.hs:210:7-30                     593          1    0.0    0.0     0.0    0.0
+       bestPoints.firstRank                   Main                    src/Main.hs:211:7-38                     589          1    0.0    0.0     0.0    0.0
+        bestPoints.pointRank                  Main                    src/Main.hs:201:7-36                     590          0    0.0    0.0     0.0    0.0
+         countReaching                        Main                    src/Main.hs:(78,1)-(80,49)               591          1    0.0    0.0     0.0    0.0
+          countReaching.reaching              Main                    src/Main.hs:79:7-68                      592       1000    0.0    0.0     0.0    0.0
+       bestPoints.pointRank                   Main                    src/Main.hs:201:7-36                     585          1    0.0    0.0     0.0    0.0
+     countReaching                            Main                    src/Main.hs:(78,1)-(80,49)               573          1    0.0    0.0     0.0    0.0
+      countReaching.reaching                  Main                    src/Main.hs:79:7-68                      574       1000    0.0    0.0     0.0    0.0
+  inputParser                                 Main                    src/Main.hs:(53,1)-(56,13)               517          0    0.0    0.0     0.0    5.2
+   nanoBotParser                              Main                    src/Main.hs:(39,1)-(50,30)               519          0    0.0    0.2     0.0    5.1
+    numberParser                              Main                    src/Main.hs:(31,1)-(36,22)               521          0    0.0    4.9     0.0    4.9
